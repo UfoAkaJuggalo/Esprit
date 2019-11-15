@@ -1,0 +1,1 @@
+import GetColor from "./GetColor";
