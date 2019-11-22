@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <ButtonTest text="test" />
-      <Container>
+      <Container border borderDanger brdRoundedBottom2x>
         <Row alignItemsCenter>
           <h2>Test fluida</h2>
         </Row>
