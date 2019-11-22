@@ -78,8 +78,10 @@ import {
   brdPillCSS,
   brdNoneCSS
 } from ".";
+import { clearfixCSS } from "./Utilities";
 
 export interface UtilityProps {
+  clearfix?: boolean;
   alignItemsStart?: boolean;
   alignItemsEnd?: boolean;
   alignItemsCenter?: boolean;
@@ -163,6 +165,8 @@ const UtilityResolver = (
   params: UtilityProps
 ): ArrayInterpolation<undefined> => {
   let css: ArrayInterpolation<undefined> = [];
+
+  if (params.clearfix) css.push(clearfixCSS);
 
   if (params.alignItemsStart) css.push(alignItemsStartCSS);
   if (params.alignItemsCenter) css.push(alignItemsCenterCSS);
