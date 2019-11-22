@@ -1,16 +1,22 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 import "./App.css";
 
 import React from "react";
 
-import { config } from "./common/config/config";
 import { ButtonTest } from "./components/ButtonTest";
-
-declare var configuration: typeof config;
+import Container from "./components/Layout/Container";
+import Row from "./components/Layout/Row";
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <ButtonTest text="test" />
+      <Container>
+        <Row alignItemsCenter>
+          <h2>Test fluida</h2>
+        </Row>
+      </Container>
     </div>
   );
 };
