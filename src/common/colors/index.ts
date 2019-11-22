@@ -1,1 +1,1 @@
-import GetColor from "./GetColor";
+export * from "./GetColor";
