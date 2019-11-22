@@ -1,1 +1,2 @@
-import GetProperty from "./GetProperty";
+export * from "./GetProperty";
+export * from "./SetProperty";

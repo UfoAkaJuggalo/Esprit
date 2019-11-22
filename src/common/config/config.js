@@ -16,5 +16,20 @@ export const config = {
     dangerL: "#ff8a80",
     warningL: "#ffd180",
     infoL: "#82b1ff"
+  },
+  mediaQuery: {
+    xs: "576px",
+    sm: "768px",
+    md: "992px",
+    lg: "1200px"
+  },
+  zIndex: {
+    dropdown: "1000 !default",
+    sticky: "1020 !default",
+    fixed: "1030 !default",
+    modalBack: "1040 !default",
+    modal: "1050 !default",
+    popover: "1060 !default",
+    tooltip: "1070 !default"
   }
 };

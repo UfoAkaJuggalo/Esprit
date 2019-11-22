@@ -1,22 +1,28 @@
-import { config } from "./config";
+import { config as rawConfig } from "./config";
 
-interface Props {
-  color?: keyof EspritColors;
+export interface GetPropertyProps {
+  [key: string]: any;
+  colors?: keyof EspritColors;
+  mediaQuery?: keyof MediaQuery;
+  zIndex?: keyof ZIndex;
 }
 
-const GetProperty = (param: Props) => {
+const GetProperty = (param: GetPropertyProps): string => {
   const configuration: EspritConfig = window.espritConfig;
+  const config: EspritConfig = rawConfig;
 
-  if (param.color) {
-    if (
-      configuration &&
-      configuration.colors &&
-      configuration.colors[param.color]
-    ) {
-      return configuration.colors[param.color];
+  for (const key in param) {
+    if (param.hasOwnProperty(key)) {
+      const element = param[key];
+      if (configuration && configuration.hasOwnProperty(key)) {
+        const retval = configuration[key][element];
+        if (retval) return retval;
+      }
+      return config[key][element];
     }
-    return config.colors[param.color];
   }
+
+  return "";
 };
 
 export default GetProperty;

@@ -1,7 +1,7 @@
 import { config } from "./config";
+import { GetPropertyProps } from "./GetProperty";
 
-interface Props {
-  color?: keyof EspritColors;
+interface Props extends GetPropertyProps {
   value: string;
 }
 
@@ -11,8 +11,11 @@ const SetProperty = (params: Props) => {
     configuration = config;
   }
 
-  if (params.color) {
-    configuration.colors[params.color] = params.value;
+  for (const key in params) {
+    if (key != "value" && params.hasOwnProperty(key)) {
+      const element = params[key];
+      configuration[key][element] = params.value;
+    }
   }
 
   window.espritConfig = configuration;
