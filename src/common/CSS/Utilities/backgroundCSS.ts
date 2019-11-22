@@ -2,44 +2,47 @@ import { css } from "@emotion/core";
 import GetColor from "../../colors/GetColor";
 
 export const backgroundPrimaryCSS = css`
-  background: ${GetColor({ primary: true })};
+  background-color: ${GetColor({ primary: true })}!important;
 `;
 export const backgroundPrimaryDCSS = css`
-  background: ${GetColor({ Dprimary: true })};
+  background-color: ${GetColor({ Dprimary: true })}!important;
 `;
 export const backgroundPrimaryLCSS = css`
-  background: ${GetColor({ Lprimary: true })};
+  background-color: ${GetColor({ Lprimary: true })}!important;
 `;
 export const backgroundAccentCSS = css`
-  background: ${GetColor({ accent: true })};
+  background-color: ${GetColor({ accent: true })}!important;
 `;
 export const backgroundSuccessCSS = css`
-  background: ${GetColor({ success: true })};
+  background-color: ${GetColor({ success: true })}!important;
 `;
 export const backgroundSuccessLCSS = css`
-  background: ${GetColor({ successL: true })};
+  background-color: ${GetColor({ successL: true })}!important;
 `;
 export const backgroundDangerCSS = css`
-  background: ${GetColor({ danger: true })};
+  background-color: ${GetColor({ danger: true })}!important;
 `;
 export const backgroundDangerLCSS = css`
-  background: ${GetColor({ dangerL: true })};
+  background-color: ${GetColor({ dangerL: true })}!important;
 `;
 export const backgroundInfoCSS = css`
-  background: ${GetColor({ info: true })};
+  background-color: ${GetColor({ info: true })}!important;
 `;
 export const backgroundInfoLCSS = css`
-  background: ${GetColor({ infoL: true })};
+  background-color: ${GetColor({ infoL: true })}!important;
 `;
 export const backgroundWarningCSS = css`
-  background: ${GetColor({ warning: true })};
+  background-color: ${GetColor({ warning: true })}!important;
 `;
 export const backgroundWarningLCSS = css`
-  background: ${GetColor({ warningL: true })};
+  background-color: ${GetColor({ warningL: true })}!important;
 `;
 export const backgroundDisabledCSS = css`
-  background: ${GetColor({ Lgray: true })};
+  background-color: ${GetColor({ Lgray: true })}!important;
 `;
 export const backgroundDisabledDCSS = css`
-  background: ${GetColor({ Dgray: true })};
+  background-color: ${GetColor({ Dgray: true })}!important;
+`;
+export const backgroundTransparentCSS = css`
+  background-color: transparent !important;
 `;

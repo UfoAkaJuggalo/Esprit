@@ -78,7 +78,24 @@ import {
   brdPillCSS,
   brdNoneCSS
 } from ".";
-import { clearfixCSS } from "./Utilities";
+import {
+  clearfixCSS,
+  backgroundPrimaryCSS,
+  backgroundPrimaryDCSS,
+  backgroundPrimaryLCSS,
+  backgroundAccentCSS,
+  backgroundSuccessCSS,
+  backgroundSuccessLCSS,
+  backgroundDangerCSS,
+  backgroundDangerLCSS,
+  backgroundInfoCSS,
+  backgroundInfoLCSS,
+  backgroundWarningCSS,
+  backgroundWarningLCSS,
+  backgroundDisabledCSS,
+  backgroundDisabledDCSS,
+  backgroundTransparentCSS
+} from ".";
 
 export interface UtilityProps {
   clearfix?: boolean;
@@ -159,6 +176,21 @@ export interface UtilityProps {
   brdCircle?: boolean;
   brdPill?: boolean;
   brdNone?: boolean;
+  BgPrimary?: boolean;
+  BgPrimaryD?: boolean;
+  BgPrimaryL?: boolean;
+  BgAccent?: boolean;
+  BgSuccess?: boolean;
+  BgSuccessL?: boolean;
+  BgDanger?: boolean;
+  BgDangerL?: boolean;
+  BgInfo?: boolean;
+  BgInfoL?: boolean;
+  BgWarning?: boolean;
+  BgWarningL?: boolean;
+  BgDisabled?: boolean;
+  BgDisabledD?: boolean;
+  BgTransparent?: boolean;
 }
 
 const UtilityResolver = (
@@ -167,6 +199,22 @@ const UtilityResolver = (
   let css: ArrayInterpolation<undefined> = [];
 
   if (params.clearfix) css.push(clearfixCSS);
+
+  if (params.BgPrimary) css.push(backgroundPrimaryCSS);
+  if (params.BgPrimaryD) css.push(backgroundPrimaryDCSS);
+  if (params.BgPrimaryL) css.push(backgroundPrimaryLCSS);
+  if (params.BgAccent) css.push(backgroundAccentCSS);
+  if (params.BgSuccess) css.push(backgroundSuccessCSS);
+  if (params.BgSuccessL) css.push(backgroundSuccessLCSS);
+  if (params.BgDanger) css.push(backgroundDangerCSS);
+  if (params.BgDangerL) css.push(backgroundDangerLCSS);
+  if (params.BgInfo) css.push(backgroundInfoCSS);
+  if (params.BgInfoL) css.push(backgroundInfoLCSS);
+  if (params.BgWarning) css.push(backgroundWarningCSS);
+  if (params.BgWarningL) css.push(backgroundWarningLCSS);
+  if (params.BgDisabled) css.push(backgroundDisabledCSS);
+  if (params.BgDisabledD) css.push(backgroundDisabledDCSS);
+  if (params.BgTransparent) css.push(backgroundTransparentCSS);
 
   if (params.alignItemsStart) css.push(alignItemsStartCSS);
   if (params.alignItemsCenter) css.push(alignItemsCenterCSS);
