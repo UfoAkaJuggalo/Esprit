@@ -11,6 +11,7 @@ import DisplayResolver, { DisplayProps } from "./displayResolver";
 import FlexDirectionResolver, {
   FlexDirectionProps
 } from "./flexDirectionResolver";
+import AlignSelfResolver, { AlignSelfProps } from "./alignSelfResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -20,7 +21,8 @@ export interface UtilityProps
     BorderProps,
     DisplayProps,
     TextProps,
-    FlexDirectionProps {}
+    FlexDirectionProps,
+    AlignSelfProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -35,6 +37,7 @@ const UtilityResolver = (
   css = css.concat(TextResolver(params));
   css = css.concat(DisplayResolver(params));
   css = css.concat(FlexDirectionResolver(params));
+  css = css.concat(AlignSelfResolver(params));
 
   return css;
 };
