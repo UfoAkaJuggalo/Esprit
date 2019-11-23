@@ -22,44 +22,44 @@ export const txtRightCSS = css`
 `;
 
 export const txtPrimaryCSS = css`
-  color: ${GetColor({ primary: true })};
+  color: ${GetColor({ primary: true })}!important;
 `;
 export const txtPrimaryDCSS = css`
-  color: ${GetColor({ Dprimary: true })};
+  color: ${GetColor({ Dprimary: true })}!important;
 `;
 export const txtPrimaryLCSS = css`
-  color: ${GetColor({ Lprimary: true })};
+  color: ${GetColor({ Lprimary: true })}!important;
 `;
 export const txtAccentCSS = css`
-  color: ${GetColor({ accent: true })};
+  color: ${GetColor({ accent: true })}!important;
 `;
 export const txtSuccessCSS = css`
-  color: ${GetColor({ success: true })};
+  color: ${GetColor({ success: true })}!important;
 `;
 export const txtSuccessLCSS = css`
-  color: ${GetColor({ successL: true })};
+  color: ${GetColor({ successL: true })}!important;
 `;
 export const txtDangerCSS = css`
-  color: ${GetColor({ danger: true })};
+  color: ${GetColor({ danger: true })}!important;
 `;
 export const txtDangerLCSS = css`
-  color: ${GetColor({ dangerL: true })};
+  color: ${GetColor({ dangerL: true })}!important;
 `;
 export const txtInfoCSS = css`
-  color: ${GetColor({ info: true })};
+  color: ${GetColor({ info: true })}!important;
 `;
 export const txtInfoLCSS = css`
-  color: ${GetColor({ infoL: true })};
+  color: ${GetColor({ infoL: true })}!important;
 `;
 export const txtWarningCSS = css`
-  color: ${GetColor({ warning: true })};
+  color: ${GetColor({ warning: true })}!important;
 `;
 export const txtWarningLCSS = css`
-  color: ${GetColor({ warningL: true })};
+  color: ${GetColor({ warningL: true })}!important;
 `;
 export const txtDisabledCSS = css`
-  color: ${GetColor({ Lgray: true })};
+  color: ${GetColor({ Lgray: true })}!important;
 `;
 export const txtDisabledDCSS = css`
-  color: ${GetColor({ Dgray: true })};
+  color: ${GetColor({ Dgray: true })}!important;
 `;

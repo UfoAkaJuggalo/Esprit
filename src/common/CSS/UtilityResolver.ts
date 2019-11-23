@@ -76,7 +76,21 @@ import {
   brdRounded0CSS,
   brdCircleCSS,
   brdPillCSS,
-  brdNoneCSS
+  brdNoneCSS,
+  txtPrimaryCSS,
+  txtPrimaryDCSS,
+  txtPrimaryLCSS,
+  txtAccentCSS,
+  txtSuccessCSS,
+  txtSuccessLCSS,
+  txtDangerCSS,
+  txtDangerLCSS,
+  txtInfoCSS,
+  txtInfoLCSS,
+  txtWarningCSS,
+  txtWarningLCSS,
+  txtDisabledCSS,
+  txtDisabledDCSS
 } from ".";
 import {
   clearfixCSS,
@@ -191,6 +205,20 @@ export interface UtilityProps {
   BgDisabled?: boolean;
   BgDisabledD?: boolean;
   BgTransparent?: boolean;
+  txtPrimary?: boolean;
+  txtPrimaryD?: boolean;
+  txtPrimaryL?: boolean;
+  txtAccent?: boolean;
+  txtSuccess?: boolean;
+  txtSuccessL?: boolean;
+  txtDanger?: boolean;
+  txtDangerL?: boolean;
+  txtInfo?: boolean;
+  txtInfoL?: boolean;
+  txtWarning?: boolean;
+  txtWarningL?: boolean;
+  txtDisabled?: boolean;
+  txtDisabledD?: boolean;
 }
 
 const UtilityResolver = (
@@ -306,6 +334,21 @@ const UtilityResolver = (
   if (params.brdCircle) css.push(brdCircleCSS);
   if (params.brdPill) css.push(brdPillCSS);
   if (params.brdNone) css.push(brdNoneCSS);
+
+  if (params.txtPrimary) css.push(txtPrimaryCSS);
+  if (params.txtPrimaryD) css.push(txtPrimaryDCSS);
+  if (params.txtPrimaryL) css.push(txtPrimaryLCSS);
+  if (params.txtAccent) css.push(txtAccentCSS);
+  if (params.txtSuccess) css.push(txtSuccessCSS);
+  if (params.txtSuccessL) css.push(txtSuccessLCSS);
+  if (params.txtDanger) css.push(txtDangerCSS);
+  if (params.txtDangerL) css.push(txtDangerLCSS);
+  if (params.txtInfo) css.push(txtInfoCSS);
+  if (params.txtInfoL) css.push(txtInfoLCSS);
+  if (params.txtWarning) css.push(txtWarningCSS);
+  if (params.txtWarningL) css.push(txtWarningLCSS);
+  if (params.txtDisabled) css.push(txtDisabledCSS);
+  if (params.txtDisabledD) css.push(txtDisabledDCSS);
 
   return css;
 };
