@@ -6,7 +6,7 @@ import {
   containerCSS,
   UtilityProps
 } from "../../common/CSS";
-import UtilityResolver from "../../common/CSS/UtilityResolver";
+import UtilityResolver from "../../common/CSS/UtilityResolver/MainResolver";
 
 interface props extends UtilityProps {
   [x: string]: ReactNode;
