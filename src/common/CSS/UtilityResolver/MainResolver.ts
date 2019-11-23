@@ -8,6 +8,9 @@ import JustifyContentResolver, {
 import BorderResolver, { BorderProps } from "./borderResolver";
 import TextResolver, { TextProps } from "./textResolver";
 import DisplayResolver, { DisplayProps } from "./displayResolver";
+import FlexDirectionResolver, {
+  FlexDirectionProps
+} from "./flexDirectionResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -16,7 +19,8 @@ export interface UtilityProps
     JustifyContentProps,
     BorderProps,
     DisplayProps,
-    TextProps {}
+    TextProps,
+    FlexDirectionProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -30,6 +34,7 @@ const UtilityResolver = (
   css = css.concat(JustifyContentResolver(params));
   css = css.concat(TextResolver(params));
   css = css.concat(DisplayResolver(params));
+  css = css.concat(FlexDirectionResolver(params));
 
   return css;
 };
