@@ -14,6 +14,7 @@ import FlexDirectionResolver, {
 import AlignSelfResolver, { AlignSelfProps } from "./alignSelfResolver";
 import FlexFillfResolver, { FlexFillProps } from "./flexFillResolver";
 import FlexGrowResolver, { FlexGrowProps } from "./flexGrowResolver";
+import FlexShrinkResolver, { FlexShrinkProps } from "./flexShrinkResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -26,7 +27,8 @@ export interface UtilityProps
     FlexDirectionProps,
     AlignSelfProps,
     FlexFillProps,
-    FlexGrowProps {}
+    FlexGrowProps,
+    FlexShrinkProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -44,6 +46,7 @@ const UtilityResolver = (
   css = css.concat(AlignSelfResolver(params));
   css = css.concat(FlexFillfResolver(params));
   css = css.concat(FlexGrowResolver(params));
+  css = css.concat(FlexShrinkResolver(params));
 
   return css;
 };
