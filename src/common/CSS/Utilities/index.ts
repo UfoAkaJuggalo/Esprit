@@ -10,3 +10,4 @@ export * from "./alignSelfCSS";
 export * from "./flexFillCSS";
 export * from "./flexGrowCSS";
 export * from "./flexShrinkCSS";
+export * from "./flexWrapCSS";
