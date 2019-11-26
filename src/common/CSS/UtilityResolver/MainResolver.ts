@@ -16,6 +16,7 @@ import FlexFillfResolver, { FlexFillProps } from "./flexFillResolver";
 import FlexGrowResolver, { FlexGrowProps } from "./flexGrowResolver";
 import FlexShrinkResolver, { FlexShrinkProps } from "./flexShrinkResolver";
 import FlexWrapResolver, { FlexWrapProps } from "./flexWrapResolver";
+import OrderResolver, { OrderProps } from "./orderResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -30,7 +31,8 @@ export interface UtilityProps
     FlexFillProps,
     FlexGrowProps,
     FlexShrinkProps,
-    FlexWrapProps {}
+    FlexWrapProps,
+    OrderProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -50,6 +52,7 @@ const UtilityResolver = (
   css = css.concat(FlexGrowResolver(params));
   css = css.concat(FlexShrinkResolver(params));
   css = css.concat(FlexWrapResolver(params));
+  css = css.concat(OrderResolver(params));
 
   return css;
 };
