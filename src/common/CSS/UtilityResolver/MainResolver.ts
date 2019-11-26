@@ -8,6 +8,18 @@ import JustifyContentResolver, {
 import BorderResolver, { BorderProps } from "./borderResolver";
 import TextResolver, { TextProps } from "./textResolver";
 import DisplayResolver, { DisplayProps } from "./displayResolver";
+import FlexDirectionResolver, {
+  FlexDirectionProps
+} from "./flexDirectionResolver";
+import AlignSelfResolver, { AlignSelfProps } from "./alignSelfResolver";
+import FlexFillfResolver, { FlexFillProps } from "./flexFillResolver";
+import FlexGrowResolver, { FlexGrowProps } from "./flexGrowResolver";
+import FlexShrinkResolver, { FlexShrinkProps } from "./flexShrinkResolver";
+import FlexWrapResolver, { FlexWrapProps } from "./flexWrapResolver";
+import OrderResolver, { OrderProps } from "./orderResolver";
+import alignContentResolver, {
+  alignContentProps
+} from "./alignContentResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -16,7 +28,15 @@ export interface UtilityProps
     JustifyContentProps,
     BorderProps,
     DisplayProps,
-    TextProps {}
+    TextProps,
+    FlexDirectionProps,
+    AlignSelfProps,
+    FlexFillProps,
+    FlexGrowProps,
+    FlexShrinkProps,
+    FlexWrapProps,
+    OrderProps,
+    alignContentProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -30,6 +50,14 @@ const UtilityResolver = (
   css = css.concat(JustifyContentResolver(params));
   css = css.concat(TextResolver(params));
   css = css.concat(DisplayResolver(params));
+  css = css.concat(FlexDirectionResolver(params));
+  css = css.concat(AlignSelfResolver(params));
+  css = css.concat(FlexFillfResolver(params));
+  css = css.concat(FlexGrowResolver(params));
+  css = css.concat(FlexShrinkResolver(params));
+  css = css.concat(FlexWrapResolver(params));
+  css = css.concat(OrderResolver(params));
+  css = css.concat(alignContentResolver(params));
 
   return css;
 };
