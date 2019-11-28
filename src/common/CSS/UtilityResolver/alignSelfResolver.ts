@@ -1,35 +1,12 @@
 import { ArrayInterpolation } from "@emotion/core";
+
 import {
-  alignSelfStartCSS,
-  alignSelfStartSmCSS,
-  alignSelfStartMdCSS,
-  alignSelfStartLgCSS,
-  alignSelfStartXlCSS,
   alignSelfAutoCSS,
-  alignSelfAutoSmCSS,
-  alignSelfAutoMdCSS,
-  alignSelfAutoLgCSS,
-  alignSelfAutoXlCSS,
   alignSelfBaselineCSS,
-  alignSelfBaselineSmCSS,
-  alignSelfBaselineMdCSS,
-  alignSelfBaselineLgCSS,
-  alignSelfBaselineXlCSS,
   alignSelfCenterCSS,
-  alignSelfCenterSmCSS,
-  alignSelfCenterMdCSS,
-  alignSelfCenterLgCSS,
-  alignSelfCenterXlCSS,
   alignSelfEndCSS,
-  alignSelfEndSmCSS,
-  alignSelfEndMdCSS,
-  alignSelfEndLgCSS,
-  alignSelfEndXlCSS,
-  alignSelfStretchCSS,
-  alignSelfStretchSmCSS,
-  alignSelfStretchMdCSS,
-  alignSelfStretchLgCSS,
-  alignSelfStretchXlCSS
+  alignSelfStartCSS,
+  alignSelfStretchCSS
 } from "..";
 
 export interface AlignSelfProps {
