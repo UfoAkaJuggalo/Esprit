@@ -1,147 +1,186 @@
-import { css } from "@emotion/core";
+import { css, SerializedStyles } from "@emotion/core";
 import GetProperty from "../../config/GetProperty";
 
-export const justifyContentStartCSS = css`
-  -ms-flex-pack: start !important;
-  justify-content: flex-start !important;
-`;
-export const justifyContentCenterCSS = css`
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
-`;
-export const justifyContentEndCSS = css`
-  -ms-flex-pack: end !important;
-  justify-content: flex-end !important;
-`;
-export const justifyContentAroundCSS = css`
-  -ms-flex-pack: distribute !important;
-  justify-content: space-around !important;
-`;
-export const justifyContentBetweenCSS = css`
-  -ms-flex-pack: justify !important;
-  justify-content: space-between !important;
-`;
+export interface Props {
+  mediaQuery?: keyof MediaQuery;
+}
 
-export const justifyContentStartSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+export const justifyContentStartCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-pack: start !important;
     justify-content: flex-start !important;
-  }
-`;
-export const justifyContentCenterSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-    -ms-flex-pack: center !important;
-    justify-content: center !important;
-  }
-`;
-export const justifyContentEndSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-    -ms-flex-pack: end !important;
-    justify-content: flex-end !important;
-  }
-`;
-export const justifyContentAroundSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-    -ms-flex-pack: distribute !important;
-    justify-content: space-around !important;
-  }
-`;
-export const justifyContentBetweenSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-    -ms-flex-pack: justify !important;
-    justify-content: space-between !important;
-  }
-`;
+  `;
 
-export const justifyContentStartMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-pack: start !important;
-    justify-content: flex-start !important;
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const justifyContentCenterMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-pack: center !important;
-    justify-content: center !important;
-  }
-`;
-export const justifyContentEndMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-pack: end !important;
-    justify-content: flex-end !important;
-  }
-`;
-export const justifyContentAroundMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-pack: distribute !important;
-    justify-content: space-around !important;
-  }
-`;
-export const justifyContentBetweenMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-pack: justify !important;
-    justify-content: space-between !important;
-  }
-`;
+};
 
-export const justifyContentStartLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-pack: start !important;
-    justify-content: flex-start !important;
-  }
-`;
-export const justifyContentCenterLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+export const justifyContentCenterCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-pack: center !important;
     justify-content: center !important;
-  }
-`;
-export const justifyContentEndLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-pack: end !important;
-    justify-content: flex-end !important;
-  }
-`;
-export const justifyContentAroundLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-pack: distribute !important;
-    justify-content: space-around !important;
-  }
-`;
-export const justifyContentBetweenLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-pack: justify !important;
-    justify-content: space-between !important;
-  }
-`;
+  `;
 
-export const justifyContentStartXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex-pack: start !important;
-    justify-content: flex-start !important;
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const justifyContentCenterXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex-pack: center !important;
-    justify-content: center !important;
-  }
-`;
-export const justifyContentEndXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+};
+
+export const justifyContentEndCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-pack: end !important;
     justify-content: flex-end !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const justifyContentAroundXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+};
+
+export const justifyContentAroundCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-pack: distribute !important;
     justify-content: space-around !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const justifyContentBetweenXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+};
+
+export const justifyContentBetweenCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
+};

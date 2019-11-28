@@ -1,30 +1,11 @@
 import { ArrayInterpolation } from "@emotion/core";
+
 import {
-  justifyContentStartCSS,
-  justifyContentCenterCSS,
-  justifyContentEndCSS,
   justifyContentAroundCSS,
   justifyContentBetweenCSS,
-  justifyContentStartSmCSS,
-  justifyContentCenterSmCSS,
-  justifyContentEndSmCSS,
-  justifyContentAroundSmCSS,
-  justifyContentBetweenSmCSS,
-  justifyContentStartMdCSS,
-  justifyContentCenterMdCSS,
-  justifyContentEndMdCSS,
-  justifyContentAroundMdCSS,
-  justifyContentBetweenMdCSS,
-  justifyContentStartLgCSS,
-  justifyContentCenterLgCSS,
-  justifyContentEndLgCSS,
-  justifyContentAroundLgCSS,
-  justifyContentBetweenLgCSS,
-  justifyContentStartXlCSS,
-  justifyContentCenterXlCSS,
-  justifyContentEndXlCSS,
-  justifyContentAroundXlCSS,
-  justifyContentBetweenXlCSS
+  justifyContentCenterCSS,
+  justifyContentEndCSS,
+  justifyContentStartCSS
 } from "..";
 
 export interface JustifyContentProps {
@@ -60,35 +41,55 @@ const JustifyContentResolver = (
 ): ArrayInterpolation<undefined> => {
   let css: ArrayInterpolation<undefined> = [];
 
-  if (params.justifyContentStart) css.push(justifyContentStartCSS);
-  if (params.justifyContentCenter) css.push(justifyContentCenterCSS);
-  if (params.justifyContentEnd) css.push(justifyContentEndCSS);
-  if (params.justifyContentAround) css.push(justifyContentAroundCSS);
-  if (params.justifyContentBetween) css.push(justifyContentBetweenCSS);
+  if (params.justifyContentStart) css.push(justifyContentStartCSS({}));
+  if (params.justifyContentStartSm)
+    css.push(justifyContentStartCSS({ mediaQuery: "xs" }));
+  if (params.justifyContentStartMd)
+    css.push(justifyContentStartCSS({ mediaQuery: "sm" }));
+  if (params.justifyContentStartLg)
+    css.push(justifyContentStartCSS({ mediaQuery: "md" }));
+  if (params.justifyContentStartXl)
+    css.push(justifyContentStartCSS({ mediaQuery: "lg" }));
 
-  if (params.justifyContentStartSm) css.push(justifyContentStartSmCSS);
-  if (params.justifyContentCenterSm) css.push(justifyContentCenterSmCSS);
-  if (params.justifyContentEndSm) css.push(justifyContentEndSmCSS);
-  if (params.justifyContentAroundSm) css.push(justifyContentAroundSmCSS);
-  if (params.justifyContentBetweenSm) css.push(justifyContentBetweenSmCSS);
+  if (params.justifyContentCenter) css.push(justifyContentCenterCSS({}));
+  if (params.justifyContentCenterSm)
+    css.push(justifyContentCenterCSS({ mediaQuery: "xs" }));
+  if (params.justifyContentCenterMd)
+    css.push(justifyContentCenterCSS({ mediaQuery: "sm" }));
+  if (params.justifyContentCenterLg)
+    css.push(justifyContentCenterCSS({ mediaQuery: "md" }));
+  if (params.justifyContentCenterXl)
+    css.push(justifyContentCenterCSS({ mediaQuery: "lg" }));
 
-  if (params.justifyContentStartMd) css.push(justifyContentStartMdCSS);
-  if (params.justifyContentCenterMd) css.push(justifyContentCenterMdCSS);
-  if (params.justifyContentEndMd) css.push(justifyContentEndMdCSS);
-  if (params.justifyContentAroundMd) css.push(justifyContentAroundMdCSS);
-  if (params.justifyContentBetweenMd) css.push(justifyContentBetweenMdCSS);
+  if (params.justifyContentEnd) css.push(justifyContentEndCSS({}));
+  if (params.justifyContentEndSm)
+    css.push(justifyContentEndCSS({ mediaQuery: "xs" }));
+  if (params.justifyContentEndMd)
+    css.push(justifyContentEndCSS({ mediaQuery: "sm" }));
+  if (params.justifyContentEndLg)
+    css.push(justifyContentEndCSS({ mediaQuery: "md" }));
+  if (params.justifyContentEndXl)
+    css.push(justifyContentEndCSS({ mediaQuery: "lg" }));
 
-  if (params.justifyContentStartLg) css.push(justifyContentStartLgCSS);
-  if (params.justifyContentCenterLg) css.push(justifyContentCenterLgCSS);
-  if (params.justifyContentEndLg) css.push(justifyContentEndLgCSS);
-  if (params.justifyContentAroundLg) css.push(justifyContentAroundLgCSS);
-  if (params.justifyContentBetweenLg) css.push(justifyContentBetweenLgCSS);
+  if (params.justifyContentAround) css.push(justifyContentAroundCSS({}));
+  if (params.justifyContentAroundSm)
+    css.push(justifyContentAroundCSS({ mediaQuery: "xs" }));
+  if (params.justifyContentAroundMd)
+    css.push(justifyContentAroundCSS({ mediaQuery: "sm" }));
+  if (params.justifyContentAroundLg)
+    css.push(justifyContentAroundCSS({ mediaQuery: "md" }));
+  if (params.justifyContentAroundXl)
+    css.push(justifyContentAroundCSS({ mediaQuery: "lg" }));
 
-  if (params.justifyContentStartXl) css.push(justifyContentStartXlCSS);
-  if (params.justifyContentCenterXl) css.push(justifyContentCenterXlCSS);
-  if (params.justifyContentEndXl) css.push(justifyContentEndXlCSS);
-  if (params.justifyContentAroundXl) css.push(justifyContentAroundXlCSS);
-  if (params.justifyContentBetweenXl) css.push(justifyContentBetweenXlCSS);
+  if (params.justifyContentBetween) css.push(justifyContentBetweenCSS({}));
+  if (params.justifyContentBetweenSm)
+    css.push(justifyContentBetweenCSS({ mediaQuery: "xs" }));
+  if (params.justifyContentBetweenMd)
+    css.push(justifyContentBetweenCSS({ mediaQuery: "sm" }));
+  if (params.justifyContentBetweenLg)
+    css.push(justifyContentBetweenCSS({ mediaQuery: "md" }));
+  if (params.justifyContentBetweenXl)
+    css.push(justifyContentBetweenCSS({ mediaQuery: "lg" }));
 
   return css;
 };
