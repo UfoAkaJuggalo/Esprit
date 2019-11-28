@@ -1,21 +1,6 @@
 import { ArrayInterpolation } from "@emotion/core";
-import {
-  flexWrapCSS,
-  flexWrapSmCSS,
-  flexWrapMdCSS,
-  flexWrapLgCSS,
-  flexWrapXlCSS,
-  flexNoWrapCSS,
-  flexNoWrapSmCSS,
-  flexNoWrapMdCSS,
-  flexNoWrapLgCSS,
-  flexNoWrapXlCSS,
-  flexWrapReverseCSS,
-  flexWrapReverseSmCSS,
-  flexWrapReverseMdCSS,
-  flexWrapReverseLgCSS,
-  flexWrapReverseXlCSS
-} from "..";
+
+import { flexNoWrapCSS, flexWrapCSS, flexWrapReverseCSS } from "..";
 
 export interface FlexWrapProps {
   flexWrap?: boolean;
@@ -40,23 +25,27 @@ const FlexWrapResolver = (
 ): ArrayInterpolation<undefined> => {
   let css: ArrayInterpolation<undefined> = [];
 
-  if (params.flexWrap) css.push(flexWrapCSS);
-  if (params.flexWrapSm) css.push(flexWrapSmCSS);
-  if (params.flexWrapMd) css.push(flexWrapMdCSS);
-  if (params.flexWrapLg) css.push(flexWrapLgCSS);
-  if (params.flexWrapXl) css.push(flexWrapXlCSS);
+  if (params.flexWrap) css.push(flexWrapCSS({}));
+  if (params.flexWrapSm) css.push(flexWrapCSS({ mediaQuery: "xs" }));
+  if (params.flexWrapMd) css.push(flexWrapCSS({ mediaQuery: "sm" }));
+  if (params.flexWrapLg) css.push(flexWrapCSS({ mediaQuery: "md" }));
+  if (params.flexWrapXl) css.push(flexWrapCSS({ mediaQuery: "lg" }));
 
-  if (params.flexNoWrap) css.push(flexNoWrapCSS);
-  if (params.flexNoWrapSm) css.push(flexNoWrapSmCSS);
-  if (params.flexNoWrapMd) css.push(flexNoWrapMdCSS);
-  if (params.flexNoWrapLg) css.push(flexNoWrapLgCSS);
-  if (params.flexNoWrapXl) css.push(flexNoWrapXlCSS);
+  if (params.flexNoWrap) css.push(flexNoWrapCSS({}));
+  if (params.flexNoWrapSm) css.push(flexNoWrapCSS({ mediaQuery: "xs" }));
+  if (params.flexNoWrapMd) css.push(flexNoWrapCSS({ mediaQuery: "sm" }));
+  if (params.flexNoWrapLg) css.push(flexNoWrapCSS({ mediaQuery: "md" }));
+  if (params.flexNoWrapXl) css.push(flexNoWrapCSS({ mediaQuery: "lg" }));
 
-  if (params.flexWrapReverse) css.push(flexWrapReverseCSS);
-  if (params.flexWrapReverseSm) css.push(flexWrapReverseSmCSS);
-  if (params.flexWrapReverseMd) css.push(flexWrapReverseMdCSS);
-  if (params.flexWrapReverseLg) css.push(flexWrapReverseLgCSS);
-  if (params.flexWrapReverseXl) css.push(flexWrapReverseXlCSS);
+  if (params.flexWrapReverse) css.push(flexWrapReverseCSS({}));
+  if (params.flexWrapReverseSm)
+    css.push(flexWrapReverseCSS({ mediaQuery: "xs" }));
+  if (params.flexWrapReverseMd)
+    css.push(flexWrapReverseCSS({ mediaQuery: "sm" }));
+  if (params.flexWrapReverseLg)
+    css.push(flexWrapReverseCSS({ mediaQuery: "md" }));
+  if (params.flexWrapReverseXl)
+    css.push(flexWrapReverseCSS({ mediaQuery: "lg" }));
 
   return css;
 };

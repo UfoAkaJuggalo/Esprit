@@ -1,88 +1,114 @@
-import css from "@emotion/css";
-
+import { css, SerializedStyles } from "@emotion/core";
 import GetProperty from "../../config/GetProperty";
 
-export const flexWrapCSS = css`
-  -ms-flex-wrap: wrap !important;
-  flex-wrap: wrap !important;
-`;
-export const flexWrapSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+export interface Props {
+  mediaQuery?: keyof MediaQuery;
+}
+
+export const flexWrapCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-wrap: wrap !important;
     flex-wrap: wrap !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const flexWrapMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-wrap: wrap !important;
-    flex-wrap: wrap !important;
-  }
-`;
-export const flexWrapLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-wrap: wrap !important;
-    flex-wrap: wrap !important;
-  }
-`;
-export const flexWrapXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex-wrap: wrap !important;
-    flex-wrap: wrap !important;
-  }
-`;
-export const flexNoWrapCSS = css`
-  -ms-flex-wrap: nowrap !important;
-  flex-wrap: nowrap !important;
-`;
-export const flexNoWrapSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const flexNoWrapCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-wrap: nowrap !important;
     flex-wrap: nowrap !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const flexNoWrapMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-wrap: nowrap !important;
-    flex-wrap: nowrap !important;
-  }
-`;
-export const flexNoWrapLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-wrap: nowrap !important;
-    flex-wrap: nowrap !important;
-  }
-`;
-export const flexNoWrapXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex-wrap: nowrap !important;
-    flex-wrap: nowrap !important;
-  }
-`;
-export const flexWrapReverseCSS = css`
-  -ms-flex-wrap: wrap-reverse !important;
-  flex-wrap: wrap-reverse !important;
-`;
-export const flexWrapReverseSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const flexWrapReverseCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-wrap: wrap-reverse !important;
     flex-wrap: wrap-reverse !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const flexWrapReverseMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-wrap: wrap-reverse !important;
-    flex-wrap: wrap-reverse !important;
-  }
-`;
-export const flexWrapReverseLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-wrap: wrap-reverse !important;
-    flex-wrap: wrap-reverse !important;
-  }
-`;
-export const flexWrapReverseXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex-wrap: wrap-reverse !important;
-    flex-wrap: wrap-reverse !important;
-  }
-`;
+};
