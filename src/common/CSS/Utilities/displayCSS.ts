@@ -1,213 +1,325 @@
-import { css } from "@emotion/core";
+import { css, SerializedStyles } from "@emotion/core";
 import GetProperty from "../../config/GetProperty";
 
-export const dNoneCSS = css`
-  display: none !important;
-`;
-export const dInlineCSS = css`
-  display: inline !important;
-`;
-export const dInlineBlockCSS = css`
-  display: inline-block !important;
-`;
-export const dInlineFlexCSS = css`
-  display: inline-flex !important;
-`;
-export const dBlockCSS = css`
-  display: block !important;
-`;
-export const dTableCSS = css`
-  display: table !important;
-`;
-export const dTableCellCSS = css`
-  display: table-cell !important;
-`;
-export const dTableRowCSS = css`
-  display: table-row !important;
-`;
-export const dFlexCSS = css`
-  display: flex !important;
-`;
-export const dNoneSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+export interface Props {
+  mediaQuery?: keyof MediaQuery;
+}
+
+export const dNoneCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: none !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dInlineSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const dInlineCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: inline !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dInlineBlockSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const dInlineBlockCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: inline-block !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dInlineFlexSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const dInlineFlexCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: inline-flex !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dBlockSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const dBlockCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: block !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dTableSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const dTableCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: table !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dTableCellSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const dTableCellCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: table-cell !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dTableRowSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const dTableRowCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: table-row !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dFlexSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+};
+
+export const dFlexCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     display: flex !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const dNoneMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: none !important;
-  }
-`;
-export const dInlineMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: inline !important;
-  }
-`;
-export const dInlineBlockMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: inline-block !important;
-  }
-`;
-export const dInlineFlexMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: inline-flex !important;
-  }
-`;
-export const dBlockMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: block !important;
-  }
-`;
-export const dTableMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: table !important;
-  }
-`;
-export const dTableCellMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: table-cell !important;
-  }
-`;
-export const dTableRowMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: table-row !important;
-  }
-`;
-export const dFlexMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    display: flex !important;
-  }
-`;
-export const dNoneLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: none !important;
-  }
-`;
-export const dInlineLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: inline !important;
-  }
-`;
-export const dInlineBlockLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: inline-block !important;
-  }
-`;
-export const dInlineFlexLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: inline-flex !important;
-  }
-`;
-export const dBlockLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: block !important;
-  }
-`;
-export const dTableLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: table !important;
-  }
-`;
-export const dTableCellLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: table-cell !important;
-  }
-`;
-export const dTableRowLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: table-row !important;
-  }
-`;
-export const dFlexLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    display: flex !important;
-  }
-`;
-export const dNoneXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: none !important;
-  }
-`;
-export const dInlineXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: inline !important;
-  }
-`;
-export const dInlineBlockXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: inline-block !important;
-  }
-`;
-export const dInlineFlexXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: inline-flex !important;
-  }
-`;
-export const dBlockXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: block !important;
-  }
-`;
-export const dTableXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: table !important;
-  }
-`;
-export const dTableCellXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: table-cell !important;
-  }
-`;
-export const dTableRowXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: table-row !important;
-  }
-`;
-export const dFlexXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    display: flex !important;
-  }
-`;
+};
+
 export const dNonePrintCSS = css`
   @media print {
     display: none !important;
