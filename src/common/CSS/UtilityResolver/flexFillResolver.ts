@@ -1,12 +1,6 @@
 import { ArrayInterpolation } from "@emotion/core";
-import {
-  clearfixCSS,
-  flexFillCSS,
-  flexFillSmCSS,
-  flexFillMdCSS,
-  flexFillLgCSS,
-  flexFillXlCSS
-} from "..";
+
+import { flexFillCSS } from "..";
 
 export interface FlexFillProps {
   flexFill?: boolean;
@@ -21,11 +15,11 @@ const FlexFillfResolver = (
 ): ArrayInterpolation<undefined> => {
   let css: ArrayInterpolation<undefined> = [];
 
-  if (params.flexFill) css.push(flexFillCSS);
-  if (params.flexFillSm) css.push(flexFillSmCSS);
-  if (params.flexFillMd) css.push(flexFillMdCSS);
-  if (params.flexFillLg) css.push(flexFillLgCSS);
-  if (params.flexFillXl) css.push(flexFillXlCSS);
+  if (params.flexFill) css.push(flexFillCSS({}));
+  if (params.flexFillSm) css.push(flexFillCSS({ mediaQuery: "xs" }));
+  if (params.flexFillMd) css.push(flexFillCSS({ mediaQuery: "sm" }));
+  if (params.flexFillLg) css.push(flexFillCSS({ mediaQuery: "md" }));
+  if (params.flexFillXl) css.push(flexFillCSS({ mediaQuery: "lg" }));
 
   return css;
 };

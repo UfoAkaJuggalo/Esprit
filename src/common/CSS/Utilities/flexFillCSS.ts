@@ -1,32 +1,42 @@
-import css from "@emotion/css";
-
+import { css, SerializedStyles } from "@emotion/core";
 import GetProperty from "../../config/GetProperty";
 
-export const flexFillCSS = css`
-  -ms-flex: 1 1 auto !important;
-  flex: 1 1 auto !important;
-`;
-export const flexFillSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+export interface Props {
+  mediaQuery?: keyof MediaQuery;
+}
+
+export const flexFillCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex: 1 1 auto !important;
     flex: 1 1 auto !important;
+  `;
+
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-export const flexFillMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex: 1 1 auto !important;
-    flex: 1 1 auto !important;
-  }
-`;
-export const flexFillLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex: 1 1 auto !important;
-    flex: 1 1 auto !important;
-  }
-`;
-export const flexFillXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex: 1 1 auto !important;
-    flex: 1 1 auto !important;
-  }
-`;
+};
