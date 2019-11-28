@@ -1,16 +1,6 @@
 import { ArrayInterpolation } from "@emotion/core";
-import {
-  flexGrow0CSS,
-  flexGrow0SmCSS,
-  flexGrow0MdCSS,
-  flexGrow0LgCSS,
-  flexGrow0XlCSS,
-  flexGrow1CSS,
-  flexGrow1SmCSS,
-  flexGrow1MdCSS,
-  flexGrow1LgCSS,
-  flexGrow1XlCSS
-} from "..";
+
+import { flexGrow0CSS, flexGrow1CSS } from "..";
 
 export interface FlexGrowProps {
   flexGrow0?: boolean;
@@ -30,17 +20,17 @@ const FlexGrowResolver = (
 ): ArrayInterpolation<undefined> => {
   let css: ArrayInterpolation<undefined> = [];
 
-  if (params.flexGrow0) css.push(flexGrow0CSS);
-  if (params.flexGrow0Sm) css.push(flexGrow0SmCSS);
-  if (params.flexGrow0Md) css.push(flexGrow0MdCSS);
-  if (params.flexGrow0Lg) css.push(flexGrow0LgCSS);
-  if (params.flexGrow0Xl) css.push(flexGrow0XlCSS);
+  if (params.flexGrow0) css.push(flexGrow0CSS({}));
+  if (params.flexGrow0Sm) css.push(flexGrow0CSS({ mediaQuery: "xs" }));
+  if (params.flexGrow0Md) css.push(flexGrow0CSS({ mediaQuery: "sm" }));
+  if (params.flexGrow0Lg) css.push(flexGrow0CSS({ mediaQuery: "md" }));
+  if (params.flexGrow0Xl) css.push(flexGrow0CSS({ mediaQuery: "lg" }));
 
-  if (params.flexGrow1) css.push(flexGrow1CSS);
-  if (params.flexGrow1Sm) css.push(flexGrow1SmCSS);
-  if (params.flexGrow1Md) css.push(flexGrow1MdCSS);
-  if (params.flexGrow1Lg) css.push(flexGrow1LgCSS);
-  if (params.flexGrow1Xl) css.push(flexGrow1XlCSS);
+  if (params.flexGrow1) css.push(flexGrow1CSS({}));
+  if (params.flexGrow1Sm) css.push(flexGrow1CSS({ mediaQuery: "xs" }));
+  if (params.flexGrow1Md) css.push(flexGrow1CSS({ mediaQuery: "sm" }));
+  if (params.flexGrow1Lg) css.push(flexGrow1CSS({ mediaQuery: "md" }));
+  if (params.flexGrow1Xl) css.push(flexGrow1CSS({ mediaQuery: "lg" }));
 
   return css;
 };
