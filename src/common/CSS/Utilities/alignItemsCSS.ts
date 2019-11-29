@@ -1,99 +1,114 @@
-import { css } from "@emotion/core";
+import { css, SerializedStyles } from "@emotion/core";
 import GetProperty from "../../config/GetProperty";
 
-export const alignItemsStartCSS = css`
-  -ms-flex-align: start !important;
-  align-items: flex-start !important;
-`;
+interface Props {
+  mediaQuery?: keyof MediaQuery;
+}
 
-export const alignItemsCenterCSS = css`
-  -ms-flex-align: center !important;
-  align-items: center !important;
-`;
-
-export const alignItemsEndCSS = css`
-  -ms-flex-align: end !important;
-  align-items: flex-end !important;
-`;
-
-export const alignItemsStartSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+export const alignItemsStartCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-align: start !important;
     align-items: flex-start !important;
-  }
-`;
+  `;
 
-export const alignItemsCenterSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
+  }
+};
+
+export const alignItemsCenterCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-align: center !important;
     align-items: center !important;
-  }
-`;
+  `;
 
-export const alignItemsEndSmCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
+  }
+};
+
+export const alignItemsEndCSS = (params: Props): SerializedStyles => {
+  const retCSS = css`
     -ms-flex-align: end !important;
     align-items: flex-end !important;
-  }
-`;
-export const alignItemsStartMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-align: start !important;
-    align-items: flex-start !important;
-  }
-`;
+  `;
 
-export const alignItemsCenterMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-align: center !important;
-    align-items: center !important;
+  switch (params.mediaQuery) {
+    case "xs":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
+          ${retCSS};
+        }
+      `;
+    case "sm":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
+          ${retCSS};
+        }
+      `;
+    case "md":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
+          ${retCSS};
+        }
+      `;
+    case "lg":
+      return css`
+        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
+          ${retCSS};
+        }
+      `;
+    default:
+      return retCSS;
   }
-`;
-
-export const alignItemsEndMdCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-    -ms-flex-align: end !important;
-    align-items: flex-end !important;
-  }
-`;
-
-export const alignItemsStartLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-align: start !important;
-    align-items: flex-start !important;
-  }
-`;
-
-export const alignItemsCenterLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-align: center !important;
-    align-items: center !important;
-  }
-`;
-
-export const alignItemsEndLgCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-    -ms-flex-align: end !important;
-    align-items: flex-end !important;
-  }
-`;
-export const alignItemsStartXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex-align: start !important;
-    align-items: flex-start !important;
-  }
-`;
-
-export const alignItemsCenterXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex-align: center !important;
-    align-items: center !important;
-  }
-`;
-
-export const alignItemsEndXlCSS = css`
-  @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-    -ms-flex-align: end !important;
-    align-items: flex-end !important;
-  }
-`;
+};
