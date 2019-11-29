@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from "@emotion/core";
 import GetProperty from "../../config/GetProperty";
 
-export interface Props {
+interface Props {
   mediaQuery?: keyof MediaQuery;
 }
 
