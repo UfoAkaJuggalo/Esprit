@@ -16,3 +16,4 @@ export * from "./alignContentCSS";
 export * from "./floatCSS";
 export * from "./positionCSS";
 export * from "./scrReaderCSS";
+export * from "./shadowCSS";

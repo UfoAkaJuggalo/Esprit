@@ -23,6 +23,7 @@ import alignContentResolver, {
 import FloatResolver, { FloatProps } from "./floatResolver";
 import PositionResolver, { PositionProps } from "./positionResolver";
 import ScrReaderResolver, { ScrReaderProps } from "./scrReaderResolver";
+import ShadowResolver, { ShadowProps } from "./shadowResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -42,7 +43,8 @@ export interface UtilityProps
     alignContentProps,
     FloatProps,
     PositionProps,
-    ScrReaderProps {}
+    ScrReaderProps,
+    ShadowProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -67,6 +69,7 @@ const UtilityResolver = (
   css = css.concat(FloatResolver(params));
   css = css.concat(PositionResolver(params));
   css = css.concat(ScrReaderResolver(params));
+  css = css.concat(ShadowResolver(params));
 
   return css;
 };
