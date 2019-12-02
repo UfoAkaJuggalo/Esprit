@@ -20,6 +20,7 @@ import OrderResolver, { OrderProps } from "./orderResolver";
 import alignContentResolver, {
   alignContentProps
 } from "./alignContentResolver";
+import FloatResolver, { FloatProps } from "./floatResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -36,7 +37,8 @@ export interface UtilityProps
     FlexShrinkProps,
     FlexWrapProps,
     OrderProps,
-    alignContentProps {}
+    alignContentProps,
+    FloatProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -58,6 +60,7 @@ const UtilityResolver = (
   css = css.concat(FlexWrapResolver(params));
   css = css.concat(OrderResolver(params));
   css = css.concat(alignContentResolver(params));
+  css = css.concat(FloatResolver(params));
 
   return css;
 };

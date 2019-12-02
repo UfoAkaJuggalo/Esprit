@@ -13,3 +13,4 @@ export * from "./flexShrinkCSS";
 export * from "./flexWrapCSS";
 export * from "./orderCSS";
 export * from "./alignContentCSS";
+export * from "./floatCSS";
