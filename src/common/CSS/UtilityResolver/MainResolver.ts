@@ -21,6 +21,7 @@ import alignContentResolver, {
   alignContentProps
 } from "./alignContentResolver";
 import FloatResolver, { FloatProps } from "./floatResolver";
+import PositionResolver, { PositionProps } from "./positionResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -38,7 +39,8 @@ export interface UtilityProps
     FlexWrapProps,
     OrderProps,
     alignContentProps,
-    FloatProps {}
+    FloatProps,
+    PositionProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -61,6 +63,7 @@ const UtilityResolver = (
   css = css.concat(OrderResolver(params));
   css = css.concat(alignContentResolver(params));
   css = css.concat(FloatResolver(params));
+  css = css.concat(PositionResolver(params));
 
   return css;
 };

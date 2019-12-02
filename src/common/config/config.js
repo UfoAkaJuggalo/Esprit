@@ -24,12 +24,12 @@ export const config = {
     lg: "1200px"
   },
   zIndex: {
-    dropdown: "1000 !default",
-    sticky: "1020 !default",
-    fixed: "1030 !default",
-    modalBack: "1040 !default",
-    modal: "1050 !default",
-    popover: "1060 !default",
-    tooltip: "1070 !default"
+    dropdown: "1000",
+    sticky: "1020",
+    fixed: "1030",
+    modalBack: "1040",
+    modal: "1050",
+    popover: "1060",
+    tooltip: "1070"
   }
 };
