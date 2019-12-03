@@ -39,6 +39,7 @@ interface EspritConfig {
   colors: EspritColors;
   mediaQuery: MediaQuery;
   zIndex: ZIndex;
+  spaceFactor: number;
 }
 
 interface Window {

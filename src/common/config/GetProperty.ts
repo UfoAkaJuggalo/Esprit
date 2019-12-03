@@ -5,6 +5,7 @@ export interface GetPropertyProps {
   colors?: keyof EspritColors;
   mediaQuery?: keyof MediaQuery;
   zIndex?: keyof ZIndex;
+  spaceFactor: number;
 }
 
 const GetProperty = (param: GetPropertyProps): string => {
