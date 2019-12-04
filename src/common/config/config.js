@@ -32,5 +32,7 @@ export const config = {
     popover: "1060",
     tooltip: "1070"
   },
-  spaceFactor: 1
+  utility: {
+    spaceFactor: 1
+  }
 };

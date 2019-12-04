@@ -34,12 +34,16 @@ interface ZIndex {
   tooltip: string;
 }
 
+interface UtilityConfig {
+  spaceFactor: number;
+}
+
 interface EspritConfig {
   [key: string]: any;
   colors: EspritColors;
   mediaQuery: MediaQuery;
   zIndex: ZIndex;
-  spaceFactor: number;
+  utility: UtilityConfig;
 }
 
 interface Window {
