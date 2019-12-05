@@ -25,6 +25,7 @@ import PositionResolver, { PositionProps } from "./positionResolver";
 import ScrReaderResolver, { ScrReaderProps } from "./scrReaderResolver";
 import ShadowResolver, { ShadowProps } from "./shadowResolver";
 import SizeResolver, { SizeProps } from "./sizeResolver";
+import SpaceResolver, { SpaceProps } from "./spaceResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -46,7 +47,8 @@ export interface UtilityProps
     PositionProps,
     ScrReaderProps,
     ShadowProps,
-    SizeProps {}
+    SizeProps,
+    SpaceProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -73,6 +75,7 @@ const UtilityResolver = (
   css = css.concat(ScrReaderResolver(params));
   css = css.concat(ShadowResolver(params));
   css = css.concat(SizeResolver(params));
+  css = css.concat(SpaceResolver(params));
 
   return css;
 };
