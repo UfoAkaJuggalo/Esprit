@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
 /** @jsx jsx */
-import { jsx, css, ArrayInterpolation } from "@emotion/core";
+import { jsx, ArrayInterpolation } from "@emotion/core";
 import { rowCSS, UtilityProps } from "../../common/CSS";
 import UtilityResolver from "../../common/CSS/UtilityResolver/MainResolver";
+import { ReactNode } from "react";
 
 interface props extends UtilityProps {
   [x: string]: ReactNode;

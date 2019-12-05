@@ -8,6 +8,5 @@ interface props {
 }
 
 export const ButtonTest = (props: props) => {
-  console.log("borderCSS :", borderCSS.styles);
   return <button css={[borderCSS, brdRoundedCSS]}>{props.text}</button>;
 };

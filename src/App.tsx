@@ -12,8 +12,8 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <ButtonTest text="test" />
-      <Container border borderDanger brdRoundedBottom2x>
-        <Row alignItemsCenter>
+      <Container border borderDanger brdRoundedBottom2x mXAuto>
+        <Row alignItemsCenter pX2Lg mT2Sm>
           <h2>Test fluida</h2>
         </Row>
       </Container>
