@@ -19,3 +19,4 @@ export * from "./scrReaderCSS";
 export * from "./shadowCSS";
 export * from "./sizeCSS";
 export * from "./spaceCSS";
+export * from "./alignVerticalCSS";
