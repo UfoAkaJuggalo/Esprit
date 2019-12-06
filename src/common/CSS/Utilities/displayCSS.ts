@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from "@emotion/core";
-import GetProperty from "../../config/GetProperty";
+
+import { MediaQueryWraper } from "./mediaQueryWraper";
 
 interface Props {
   mediaQuery?: keyof MediaQuery;
@@ -10,34 +11,7 @@ export const dNoneCSS = (params: Props): SerializedStyles => {
     display: none !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dInlineCSS = (params: Props): SerializedStyles => {
@@ -45,34 +19,7 @@ export const dInlineCSS = (params: Props): SerializedStyles => {
     display: inline !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dInlineBlockCSS = (params: Props): SerializedStyles => {
@@ -80,34 +27,7 @@ export const dInlineBlockCSS = (params: Props): SerializedStyles => {
     display: inline-block !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dInlineFlexCSS = (params: Props): SerializedStyles => {
@@ -115,34 +35,7 @@ export const dInlineFlexCSS = (params: Props): SerializedStyles => {
     display: inline-flex !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dBlockCSS = (params: Props): SerializedStyles => {
@@ -150,34 +43,7 @@ export const dBlockCSS = (params: Props): SerializedStyles => {
     display: block !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dTableCSS = (params: Props): SerializedStyles => {
@@ -185,34 +51,7 @@ export const dTableCSS = (params: Props): SerializedStyles => {
     display: table !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dTableCellCSS = (params: Props): SerializedStyles => {
@@ -220,34 +59,7 @@ export const dTableCellCSS = (params: Props): SerializedStyles => {
     display: table-cell !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dTableRowCSS = (params: Props): SerializedStyles => {
@@ -255,34 +67,7 @@ export const dTableRowCSS = (params: Props): SerializedStyles => {
     display: table-row !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dFlexCSS = (params: Props): SerializedStyles => {
@@ -290,34 +75,7 @@ export const dFlexCSS = (params: Props): SerializedStyles => {
     display: flex !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const dNonePrintCSS = css`

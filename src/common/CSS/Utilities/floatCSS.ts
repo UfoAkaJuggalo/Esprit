@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from "@emotion/core";
-import GetProperty from "../../config/GetProperty";
+
+import { MediaQueryWraper } from "./mediaQueryWraper";
 
 interface Props {
   mediaQuery?: keyof MediaQuery;
@@ -10,34 +11,7 @@ export const floatLeftCSS = (params: Props): SerializedStyles => {
     float: left !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const floatNoneCSS = (params: Props): SerializedStyles => {
@@ -45,34 +19,7 @@ export const floatNoneCSS = (params: Props): SerializedStyles => {
     float: none !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const floatRightCSS = (params: Props): SerializedStyles => {
@@ -80,32 +27,5 @@ export const floatRightCSS = (params: Props): SerializedStyles => {
     float: right !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
