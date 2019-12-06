@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from "@emotion/core";
-import GetProperty from "../../config/GetProperty";
+
+import { MediaQueryWraper } from "./mediaQueryWraper";
 
 interface Props {
   mediaQuery?: keyof MediaQuery;
@@ -11,34 +12,7 @@ export const alignItemsStartCSS = (params: Props): SerializedStyles => {
     align-items: flex-start !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const alignItemsCenterCSS = (params: Props): SerializedStyles => {
@@ -47,34 +21,7 @@ export const alignItemsCenterCSS = (params: Props): SerializedStyles => {
     align-items: center !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const alignItemsEndCSS = (params: Props): SerializedStyles => {
@@ -83,32 +30,5 @@ export const alignItemsEndCSS = (params: Props): SerializedStyles => {
     align-items: flex-end !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };

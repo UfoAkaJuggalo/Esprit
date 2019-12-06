@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from "@emotion/core";
-import GetProperty from "../../config/GetProperty";
+
+import { MediaQueryWraper } from "./mediaQueryWraper";
 
 interface Props {
   mediaQuery?: keyof MediaQuery;
@@ -11,34 +12,7 @@ export const alignSelfStartCSS = (params: Props): SerializedStyles => {
     align-self: flex-start !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const alignSelfAutoCSS = (params: Props): SerializedStyles => {
@@ -47,34 +21,7 @@ export const alignSelfAutoCSS = (params: Props): SerializedStyles => {
     align-self: auto !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const alignSelfBaselineCSS = (params: Props): SerializedStyles => {
@@ -83,34 +30,7 @@ export const alignSelfBaselineCSS = (params: Props): SerializedStyles => {
     align-self: baseline !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const alignSelfCenterCSS = (params: Props): SerializedStyles => {
@@ -119,34 +39,7 @@ export const alignSelfCenterCSS = (params: Props): SerializedStyles => {
     align-self: center !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const alignSelfEndCSS = (params: Props): SerializedStyles => {
@@ -155,34 +48,7 @@ export const alignSelfEndCSS = (params: Props): SerializedStyles => {
     align-self: flex-end !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const alignSelfStretchCSS = (params: Props): SerializedStyles => {
@@ -191,32 +57,5 @@ export const alignSelfStretchCSS = (params: Props): SerializedStyles => {
     align-self: stretch !important;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };

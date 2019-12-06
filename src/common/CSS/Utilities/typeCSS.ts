@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from "@emotion/core";
 import GetColor from "../../colors/GetColor";
 import GetProperty from "../../config/GetProperty";
+import { MediaQueryWraper } from "./mediaQueryWraper";
 
 interface Props {
   mediaQuery?: keyof MediaQuery;
@@ -89,34 +90,7 @@ export const txtLeftCSS = (params: Props): SerializedStyles => {
     text-align: left;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const txtCenterCSS = (params: Props): SerializedStyles => {
@@ -124,34 +98,7 @@ export const txtCenterCSS = (params: Props): SerializedStyles => {
     text-align: center;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
 
 export const txtRightCSS = (params: Props): SerializedStyles => {
@@ -159,32 +106,5 @@ export const txtRightCSS = (params: Props): SerializedStyles => {
     text-align: right;
   `;
 
-  switch (params.mediaQuery) {
-    case "xs":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "xs" })}) {
-          ${retCSS};
-        }
-      `;
-    case "sm":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "sm" })}) {
-          ${retCSS};
-        }
-      `;
-    case "md":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "md" })}) {
-          ${retCSS};
-        }
-      `;
-    case "lg":
-      return css`
-        @media (min-width: ${GetProperty({ mediaQuery: "lg" })}) {
-          ${retCSS};
-        }
-      `;
-    default:
-      return retCSS;
-  }
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
 };
