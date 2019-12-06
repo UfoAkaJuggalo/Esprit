@@ -29,6 +29,7 @@ import SpaceResolver, { SpaceProps } from "./spaceResolver";
 import AlignVerticalResolver, {
   AlignVerticalProps
 } from "./alignVerticalResolver";
+import VisibilityResolver, { VisibilityProps } from "./visibilityResolver";
 
 export interface UtilityProps
   extends ClearfixProps,
@@ -52,7 +53,8 @@ export interface UtilityProps
     ShadowProps,
     SizeProps,
     SpaceProps,
-    AlignVerticalProps {}
+    AlignVerticalProps,
+    VisibilityProps {}
 
 const UtilityResolver = (
   params: UtilityProps
@@ -81,6 +83,7 @@ const UtilityResolver = (
   css = css.concat(SizeResolver(params));
   css = css.concat(SpaceResolver(params));
   css = css.concat(AlignVerticalResolver(params));
+  css = css.concat(VisibilityResolver(params));
 
   return css;
 };
