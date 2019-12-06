@@ -1,5 +1,15 @@
 import { ArrayInterpolation } from "@emotion/core";
 import {
+  txtNoWrapCSS,
+  txtTruncateCSS,
+  txtLowerCSS,
+  txtUpperCSS,
+  txtCapitalCSS,
+  txtMonoCSS,
+  txtBoldCSS,
+  txtNormalCSS,
+  txtLightCSS,
+  txtItalicCSS,
   txtPrimaryCSS,
   txtPrimaryDCSS,
   txtPrimaryLCSS,
@@ -49,10 +59,31 @@ export interface TextProps {
   textLeftXl?: boolean;
   textCenterXl?: boolean;
   textRightXl?: boolean;
+  textNoWrap?: boolean;
+  txtTruncate?: boolean;
+  txtLower?: boolean;
+  txtUpper?: boolean;
+  txtCapital?: boolean;
+  txtMono?: boolean;
+  txtBold?: boolean;
+  txtNormal?: boolean;
+  txtLight?: boolean;
+  txtItalic?: boolean;
 }
 
 const TextResolver = (params: TextProps): ArrayInterpolation<undefined> => {
   let css: ArrayInterpolation<undefined> = [];
+
+  if (params.textNoWrap) css.push(txtNoWrapCSS);
+  if (params.txtTruncate) css.push(txtTruncateCSS);
+  if (params.txtLower) css.push(txtLowerCSS);
+  if (params.txtUpper) css.push(txtUpperCSS);
+  if (params.txtCapital) css.push(txtCapitalCSS);
+  if (params.txtMono) css.push(txtMonoCSS);
+  if (params.txtBold) css.push(txtBoldCSS);
+  if (params.txtNormal) css.push(txtNormalCSS);
+  if (params.txtLight) css.push(txtLightCSS);
+  if (params.txtItalic) css.push(txtItalicCSS);
 
   if (params.txtPrimary) css.push(txtPrimaryCSS);
   if (params.txtPrimaryD) css.push(txtPrimaryDCSS);
