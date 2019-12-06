@@ -34,6 +34,12 @@ interface ZIndex {
   tooltip: string;
 }
 
+interface FontWeight {
+  light: number;
+  normal: number;
+  bold: number;
+}
+
 interface UtilityConfig {
   spaceFactor: number;
 }
@@ -44,6 +50,7 @@ interface EspritConfig {
   mediaQuery: MediaQuery;
   zIndex: ZIndex;
   utility: UtilityConfig;
+  fontWeight: FontWeight;
 }
 
 interface Window {

@@ -34,5 +34,10 @@ export const config = {
   },
   utility: {
     spaceFactor: 1
+  },
+  fontWeight: {
+    light: 200,
+    normal: 400,
+    bold: 600
   }
 };

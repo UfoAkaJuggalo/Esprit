@@ -6,6 +6,7 @@ export interface GetPropertyProps {
   mediaQuery?: keyof MediaQuery;
   zIndex?: keyof ZIndex;
   utility?: keyof UtilityConfig;
+  fontWeight?: keyof FontWeight;
 }
 
 const GetProperty = (param: GetPropertyProps): string => {
