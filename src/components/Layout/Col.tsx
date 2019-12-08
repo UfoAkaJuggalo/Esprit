@@ -1,6 +1,12 @@
 /** @jsx jsx */
 import { jsx, ArrayInterpolation } from "@emotion/core";
-import { UtilityProps, ColSize, ColCSSProps, colCSS } from "../../common/CSS";
+import {
+  UtilityProps,
+  ColSize,
+  ColCSSProps,
+  colCSS,
+  offsetCSS
+} from "../../common/CSS";
 import UtilityResolver from "../../common/CSS/UtilityResolver/MainResolver";
 import { ReactNode } from "react";
 
@@ -76,6 +82,61 @@ interface props extends UtilityProps {
   col_11_lg?: boolean;
   col_12_lg?: boolean;
   col_auto_lg?: boolean;
+  offset_1?: boolean;
+  offset_2?: boolean;
+  offset_3?: boolean;
+  offset_4?: boolean;
+  offset_5?: boolean;
+  offset_6?: boolean;
+  offset_7?: boolean;
+  offset_8?: boolean;
+  offset_9?: boolean;
+  offset_10?: boolean;
+  offset_11?: boolean;
+  offset_1_xs?: boolean;
+  offset_2_xs?: boolean;
+  offset_3_xs?: boolean;
+  offset_4_xs?: boolean;
+  offset_5_xs?: boolean;
+  offset_6_xs?: boolean;
+  offset_7_xs?: boolean;
+  offset_8_xs?: boolean;
+  offset_9_xs?: boolean;
+  offset_10_xs?: boolean;
+  offset_11_xs?: boolean;
+  offset_1_sm?: boolean;
+  offset_2_sm?: boolean;
+  offset_3_sm?: boolean;
+  offset_4_sm?: boolean;
+  offset_5_sm?: boolean;
+  offset_6_sm?: boolean;
+  offset_7_sm?: boolean;
+  offset_8_sm?: boolean;
+  offset_9_sm?: boolean;
+  offset_10_sm?: boolean;
+  offset_11_sm?: boolean;
+  offset_1_md?: boolean;
+  offset_2_md?: boolean;
+  offset_3_md?: boolean;
+  offset_4_md?: boolean;
+  offset_5_md?: boolean;
+  offset_6_md?: boolean;
+  offset_7_md?: boolean;
+  offset_8_md?: boolean;
+  offset_9_md?: boolean;
+  offset_10_md?: boolean;
+  offset_11_md?: boolean;
+  offset_1_lg?: boolean;
+  offset_2_lg?: boolean;
+  offset_3_lg?: boolean;
+  offset_4_lg?: boolean;
+  offset_5_lg?: boolean;
+  offset_6_lg?: boolean;
+  offset_7_lg?: boolean;
+  offset_8_lg?: boolean;
+  offset_9_lg?: boolean;
+  offset_10_lg?: boolean;
+  offset_11_lg?: boolean;
 }
 
 const Col = (props: props) => {
@@ -147,6 +208,33 @@ const Col = (props: props) => {
       }
 
       css = css.concat(colCSS(colCSSProps));
+    }
+
+    if (
+      props.hasOwnProperty(key) &&
+      typeof props[key] == "boolean" &&
+      key.slice(0, 6) == "offset"
+    ) {
+      const params = key.split("_");
+      const offset = parseInt(params[1]);
+
+      switch (params[2]) {
+        case "xs":
+          css = css.concat(offsetCSS({ offset, mediaQuery: "xs" }));
+          break;
+        case "sm":
+          css = css.concat(offsetCSS({ offset, mediaQuery: "sm" }));
+          break;
+        case "md":
+          css = css.concat(offsetCSS({ offset, mediaQuery: "md" }));
+          break;
+        case "lg":
+          css = css.concat(offsetCSS({ offset, mediaQuery: "lg" }));
+          break;
+        default:
+          css = css.concat(offsetCSS({ offset }));
+          break;
+      }
     }
   }
 

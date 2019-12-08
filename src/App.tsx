@@ -18,7 +18,7 @@ const App: React.FC = () => {
           <Col col_4 BgInfoL>
             <h2>Test fluida</h2>
           </Col>
-          <Col col BgSuccessL>
+          <Col col_4 BgSuccessL>
             <h3>haha!</h3>
           </Col>
         </Row>

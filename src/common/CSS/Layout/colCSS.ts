@@ -21,6 +21,11 @@ export interface ColCSSProps {
   size?: ColSize;
 }
 
+interface OffsetCSSProps {
+  mediaQuery?: keyof MediaQuery;
+  offset: number;
+}
+
 export const colCSS = (params: ColCSSProps): SerializedStyles => {
   let retCSS: SerializedStyles;
   let size = `-ms-flex-preferred-size: 0;
@@ -105,6 +110,14 @@ export const colCSS = (params: ColCSSProps): SerializedStyles => {
     padding-right: 15px;
     padding-left: 15px;
     ${size}
+  `;
+
+  return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
+};
+
+export const offsetCSS = (params: OffsetCSSProps): SerializedStyles => {
+  const retCSS: SerializedStyles = css`
+    margin-left: ${(params.offset * 100) / 12}%;
   `;
 
   return MediaQueryWraper({ css: retCSS, mediaQuery: params.mediaQuery });
