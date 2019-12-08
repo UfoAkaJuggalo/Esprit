@@ -68,10 +68,32 @@ export interface OrderProps {
   order12Md?: boolean;
   order12Lg?: boolean;
   order12Xl?: boolean;
+  orderFirst?: boolean;
+  orderFirstSm?: boolean;
+  orderFirstMd?: boolean;
+  orderFirstLg?: boolean;
+  orderFirstXl?: boolean;
+  orderLast?: boolean;
+  orderLastSm?: boolean;
+  orderLastMd?: boolean;
+  orderLastLg?: boolean;
+  orderLastXl?: boolean;
 }
 
 const OrderResolver = (params: OrderProps): ArrayInterpolation<undefined> => {
   let css: ArrayInterpolation<undefined> = [];
+
+  if (params.orderFirst) css.push(orderCSS({ number: -1 }));
+  if (params.orderFirstSm) css.push(orderCSS({ mediaQuery: "xs", number: -1 }));
+  if (params.orderFirstMd) css.push(orderCSS({ mediaQuery: "sm", number: -1 }));
+  if (params.orderFirstLg) css.push(orderCSS({ mediaQuery: "md", number: -1 }));
+  if (params.orderFirstXl) css.push(orderCSS({ mediaQuery: "lg", number: -1 }));
+
+  if (params.orderLast) css.push(orderCSS({ number: 13 }));
+  if (params.orderLastSm) css.push(orderCSS({ mediaQuery: "xs", number: 13 }));
+  if (params.orderLastMd) css.push(orderCSS({ mediaQuery: "sm", number: 13 }));
+  if (params.orderLastLg) css.push(orderCSS({ mediaQuery: "md", number: 13 }));
+  if (params.orderLastXl) css.push(orderCSS({ mediaQuery: "lg", number: 13 }));
 
   if (params.order0) css.push(orderCSS({ number: 0 }));
   if (params.order0Sm) css.push(orderCSS({ mediaQuery: "xs", number: 0 }));
