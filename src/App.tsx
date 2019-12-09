@@ -8,10 +8,12 @@ import { ButtonTest } from "./components/ButtonTest";
 import Container from "./components/Layout/Container";
 import Row from "./components/Layout/Row";
 import Col from "./components/Layout/Col";
+import Esprit from "./components/Esprit";
 
 const App: React.FC = () => {
   return (
     <div className="App">
+      <Esprit />
       <ButtonTest text="test" />
       <Container border borderDanger brdRoundedBottom2x mXAuto>
         <Row mT2Sm>
