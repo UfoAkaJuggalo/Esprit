@@ -21,3 +21,4 @@ export * from "./sizeCSS";
 export * from "./spaceCSS";
 export * from "./alignVerticalCSS";
 export * from "./visibilityCSS";
+export * from "./fontCSS";
