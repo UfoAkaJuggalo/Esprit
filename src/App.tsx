@@ -18,7 +18,7 @@ const App: React.FC = () => {
       <Esprit />
       <ButtonTest text="test" />
       <Container border borderDanger brdRoundedBottom2x mXAuto>
-        <Row justifyContentAround my5>
+        <Row justifyContentAround mY3>
           <Col col_4 BgInfoL>
             <Heading display4>Test fluida</Heading>
           </Col>

@@ -16,7 +16,7 @@ const Lead = (props: Props) => {
     `
   ];
 
-  return <div css={Css.concat(UtilityResolver(props))}>{props.children}</div>;
+  return <p css={Css.concat(UtilityResolver(props))}>{props.children}</p>;
 };
 
 export default Lead;
