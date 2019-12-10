@@ -9,6 +9,7 @@ import Container from "./components/Layout/Container";
 import Row from "./components/Layout/Row";
 import Col from "./components/Layout/Col";
 import Esprit from "./components/Esprit";
+import Heading from "./components/Content/Heading";
 
 const App: React.FC = () => {
   return (
@@ -18,10 +19,10 @@ const App: React.FC = () => {
       <Container border borderDanger brdRoundedBottom2x mXAuto>
         <Row mT2Sm>
           <Col col_4 BgInfoL>
-            <h2>Test fluida</h2>
+            <Heading display4>Test fluida</Heading>
           </Col>
           <Col col_4 BgSuccessL>
-            <h3>haha!</h3>
+            <Heading h3>haha!</Heading>
           </Col>
         </Row>
       </Container>
