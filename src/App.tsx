@@ -10,6 +10,7 @@ import Row from "./components/Layout/Row";
 import Col from "./components/Layout/Col";
 import Esprit from "./components/Esprit";
 import Heading from "./components/Content/Heading";
+import Lead from "./components/Content/Lead";
 
 const App: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const App: React.FC = () => {
       <Esprit />
       <ButtonTest text="test" />
       <Container border borderDanger brdRoundedBottom2x mXAuto>
-        <Row mT2Sm>
+        <Row justifyContentAround my5>
           <Col col_4 BgInfoL>
             <Heading display4>Test fluida</Heading>
           </Col>
@@ -25,6 +26,10 @@ const App: React.FC = () => {
             <Heading h3>haha!</Heading>
           </Col>
         </Row>
+        <Lead fontMontserrat>
+          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          Duis mollis, est non commodo luctus.
+        </Lead>
       </Container>
     </div>
   );
