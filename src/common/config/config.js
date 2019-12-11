@@ -15,7 +15,8 @@ export const config = {
     successL: "#7cb342",
     dangerL: "#ff8a80",
     warningL: "#ffd180",
-    infoL: "#82b1ff"
+    infoL: "#82b1ff",
+    mark: "#ffe082"
   },
   mediaQuery: {
     xs: "576px",
