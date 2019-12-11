@@ -11,6 +11,7 @@ import Col from "./components/Layout/Col";
 import Esprit from "./components/Esprit";
 import Heading from "./components/Content/Heading";
 import Lead from "./components/Content/Lead";
+import Txt from "./components/Content/Txt";
 
 const App: React.FC = () => {
   return (
@@ -27,8 +28,12 @@ const App: React.FC = () => {
           </Col>
         </Row>
         <Lead fontMontserrat>
-          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          Duis mollis, est non commodo luctus.
+          Vivamus <Txt mark>sagittis lacus</Txt> vel augue laoreet rutrum
+          faucibus dolor auctor. Duis mollis, est non{" "}
+          <Txt txtAccent BgInfoL strike>
+            commodo
+          </Txt>{" "}
+          luctus.
         </Lead>
       </Container>
     </div>
