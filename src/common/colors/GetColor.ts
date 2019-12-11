@@ -40,6 +40,7 @@ interface Props {
   info?: boolean;
   infoL?: boolean;
   mark?: boolean;
+  text?: boolean;
 }
 
 const GetColor = (params: Props): string => {
@@ -68,6 +69,7 @@ const GetColor = (params: Props): string => {
   if (params.info) return GetProperty({ colors: "info" });
   if (params.infoL) return GetProperty({ colors: "infoL" });
   if (params.mark) return GetProperty({ colors: "mark" });
+  if (params.text) return GetProperty({ colors: "text" });
 
   return "";
 };

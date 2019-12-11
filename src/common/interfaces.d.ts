@@ -16,6 +16,7 @@ interface EspritColors {
   warningL?: string;
   infoL?: string;
   mark?: string;
+  text?: string;
 }
 
 interface MediaQuery {
