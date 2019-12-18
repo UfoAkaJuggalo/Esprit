@@ -17,12 +17,14 @@ import {
   abbrCSS,
   abbrInitialismCSS
 } from "../../common/CSS/Content";
+import { SpaceProps } from "../../common/CSS/UtilityResolver/spaceResolver";
 
 interface Props
   extends BackgroundProps,
     TextProps,
     ScrReaderProps,
     VisibilityProps,
+    SpaceProps,
     FontProps {
   [x: string]: ReactNode;
   mark?: boolean;

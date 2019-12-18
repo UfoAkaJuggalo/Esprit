@@ -12,6 +12,7 @@ import Esprit from "./components/Esprit";
 import Heading from "./components/Content/Heading";
 import Lead from "./components/Content/Lead";
 import Txt from "./components/Content/Txt";
+import Blockquote from "./components/Content/Blockquote";
 
 const App: React.FC = () => {
   return (
@@ -35,6 +36,18 @@ const App: React.FC = () => {
           </Txt>{" "}
           luctus.
         </Lead>
+        <Blockquote
+          source={
+            <React.Fragment>
+              Someone famous in <cite title=" Source Title">Source Title</cite>
+            </React.Fragment>
+          }
+        >
+          <Txt mB0>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            posuere erat a ante.
+          </Txt>
+        </Blockquote>
       </Container>
     </div>
   );
