@@ -1,5 +1,6 @@
 import { fluentColors } from "./fluent";
 import { materialColors } from "./material";
+import GetProperty from "../config/GetProperty";
 
 enum shades {
   A700,
@@ -49,7 +50,24 @@ const GetColor = (params: Props): string => {
     return materialColors[params.materialCol][params.materialSHade];
   }
 
-  return "pink";
+  if (params.primary) return GetProperty({ colors: "primary" });
+  if (params.Dprimary) return GetProperty({ colors: "Dprimary" });
+  if (params.Lprimary) return GetProperty({ colors: "Lprimary" });
+  if (params.accent) return GetProperty({ colors: "accent" });
+  if (params.primaryTxt) return GetProperty({ colors: "primaryTxt" });
+  if (params.icon) return GetProperty({ colors: "icon" });
+  if (params.Lgray) return GetProperty({ colors: "Lgray" });
+  if (params.Dgray) return GetProperty({ colors: "Dgray" });
+  if (params.success) return GetProperty({ colors: "success" });
+  if (params.successL) return GetProperty({ colors: "successL" });
+  if (params.danger) return GetProperty({ colors: "danger" });
+  if (params.dangerL) return GetProperty({ colors: "dangerL" });
+  if (params.warning) return GetProperty({ colors: "warning" });
+  if (params.warningL) return GetProperty({ colors: "warningL" });
+  if (params.info) return GetProperty({ colors: "info" });
+  if (params.infoL) return GetProperty({ colors: "infoL" });
+
+  return "";
 };
 
 export default GetColor;

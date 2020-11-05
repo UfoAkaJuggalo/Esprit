@@ -16,5 +16,28 @@ export const config = {
     dangerL: "#ff8a80",
     warningL: "#ffd180",
     infoL: "#82b1ff"
+  },
+  mediaQuery: {
+    xs: "576px",
+    sm: "768px",
+    md: "992px",
+    lg: "1200px"
+  },
+  zIndex: {
+    dropdown: "1000",
+    sticky: "1020",
+    fixed: "1030",
+    modalBack: "1040",
+    modal: "1050",
+    popover: "1060",
+    tooltip: "1070"
+  },
+  utility: {
+    spaceFactor: 1
+  },
+  fontWeight: {
+    light: 200,
+    normal: 400,
+    bold: 600
   }
 };
